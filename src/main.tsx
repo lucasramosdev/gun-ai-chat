@@ -7,7 +7,7 @@ import { AppSidebar } from './components/appsidebar.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <SidebarProvider defaultOpen={false}>
+    <SidebarProvider defaultOpen={true}>
       <AppSidebar />
       <App />
     </SidebarProvider>

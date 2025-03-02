@@ -16,10 +16,9 @@ export function AppSidebar() {
   }
 
   return (
-    <Sidebar>
+    <Sidebar className="border-sidebar-border">
       <SidebarHeader>
-        <SidebarTrigger />
-        {/* {context.open && <SidebarTrigger />} */}
+        {context.open && <SidebarTrigger />}
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup />
