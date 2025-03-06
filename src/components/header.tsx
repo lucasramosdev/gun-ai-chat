@@ -31,7 +31,7 @@ export function Header() {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
   return (
-    <div className="w-[100%] h-[60px] flex justify-between items-center">
+    <div className="w-[100%] h-[60px] flex justify-between items-center shrink">
       <div className="flex items-center">
         {!context.open && <SidebarTrigger />}
         {!context.openMobile && context.isMobile && <SidebarTrigger />}
