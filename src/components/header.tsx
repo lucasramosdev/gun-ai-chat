@@ -32,7 +32,7 @@ export function Header() {
   }
   return (
     <div className="w-[100%] h-[60px] flex justify-between items-center shrink">
-      <div className="flex items-center">
+      <div className="flex items-center pl-2">
         {!context.open && <SidebarTrigger />}
         {!context.openMobile && context.isMobile && <SidebarTrigger />}
         <DropdownMenu>

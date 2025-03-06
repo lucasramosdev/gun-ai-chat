@@ -12,6 +12,7 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { FilePenLine } from "lucide-react"
 import { useContext } from "react"
 
 const ChatGroup = ({ title, chats }: { title: string, chats: string[] }) => {
@@ -71,7 +72,11 @@ export function AppSidebar() {
   return (
     <Sidebar className="border-sidebar-border">
       <SidebarHeader>
-        {context.open && <SidebarTrigger />}
+        <div className="flex justify-between items-center w-[100%] p-2">
+          {context.open && <SidebarTrigger />}
+          {context.open && <FilePenLine className="text-white cursor-pointer h-6 w-6" />}
+        </div>
+
       </SidebarHeader>
       <SidebarContent className="overflow-x-hidden">
         <ChatGroup title={"Ontem"} chats={yesterDayChats} />

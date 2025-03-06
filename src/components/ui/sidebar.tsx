@@ -250,26 +250,15 @@ function Sidebar({
 
 function SidebarTrigger({
   className,
-  onClick,
-  ...props
 }: React.ComponentProps<typeof Button>) {
   const { toggleSidebar } = useSidebar()
 
   return (
-    <Button
-      data-sidebar="trigger"
-      data-slot="sidebar-trigger"
-      size="icon"
-      className={cn("h-10 w-10 bg-transparent cursor-pointer", className)}
-      onClick={(event) => {
-        onClick?.(event)
+    <MenuIcon
+      className={cn("h-6 w-6 bg-transparent cursor-pointer text-white hover:bg-sidebar", className)}
+      onClick={() => {
         toggleSidebar()
-      }}
-      {...props}
-    >
-      <MenuIcon />
-      <span className="sr-only">Toggle Sidebar</span>
-    </Button>
+      }} />
   )
 }
 
