@@ -79,7 +79,7 @@ export function AppSidebar() {
 
       </SidebarHeader>
       <SidebarContent className="overflow-x-hidden">
-        <ChatGroup title={"Ontem"} chats={yesterDayChats} />
+        <ChatGroup title="Ontem" chats={yesterDayChats} />
         <ChatGroup title="Últimos 7 dias" chats={lastSevenDaysChats} />
         <ChatGroup title="Dias anterioes" chats={restDaysChats} />
       </SidebarContent>
